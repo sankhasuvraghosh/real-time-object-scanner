@@ -2,6 +2,8 @@
 
 A real-time webcam object scanner. It detects everyday objects with **YOLOv8**, draws labelled boxes on the live video, and looks up a one-sentence **Wikipedia** summary for each new object it sees, all without slowing down the video feed.
 
+
+
 ## Features
 
 - **Real-time detection** using the lightweight YOLOv8 nano model (`yolov8n.pt`) on 80 COCO object classes
@@ -37,8 +39,8 @@ Webcam frame ──► YOLOv8 inference ──► boxes + labels drawn on frame
 ## Installation
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone https://github.com/sankhasuvraghosh/real-time-object-scanner.git
+cd real-time-object-scanner
 
 python -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
@@ -51,7 +53,7 @@ pip install ultralytics opencv-python wikipedia
 ## Usage
 
 ```bash
-python object_scanner.py
+python object_wiki.py
 ```
 
 - Point your webcam at objects; boxes and labels appear in the **Object Scanner** window.
@@ -90,7 +92,7 @@ Detected: cell phone → A mobile phone is a portable telephone that can make an
 
 ```
 .
-├── object_wiki.py   # main script
+├── object_wiki.py      # main script
 └── README.md
 ```
 
@@ -108,6 +110,3 @@ Detected: cell phone → A mobile phone is a portable telephone that can make an
 - [OpenCV](https://opencv.org/)
 - [wikipedia](https://pypi.org/project/wikipedia/) Python package
 
-## License
-
-Add your preferred license here (e.g. MIT).
